@@ -641,4 +641,8 @@ crashlytics-build.properties
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
+### NoGraphics ###
+.png
+.jpg
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unity,csharp

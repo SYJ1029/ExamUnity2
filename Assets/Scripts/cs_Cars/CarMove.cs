@@ -28,15 +28,16 @@ public class CarMove : MonoBehaviour
     void Update()
     {
         Vector3 accel = Vector3.zero;
-        accel += moveDirection * (moveForce - linearDampling) * Time.deltaTime;
+        accel += moveDirection * moveForce * Time.deltaTime;
 
 
-        if(speed.magnitude < maxSpeed)
+
+        if (speed.magnitude < maxSpeed)
         {
             speed += accel;
         }
 
-
+        speed += -speed.normalized * linearDampling * Time.deltaTime;
         controller.Move(speed);
         controller.Move(Physics.gravity * Time.deltaTime);
 

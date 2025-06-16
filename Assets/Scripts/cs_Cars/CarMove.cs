@@ -11,7 +11,7 @@ public class CarMove : MonoBehaviour
     public float maxSpeed;
     public float linearDampling;
 
-    Vector3 movevalue = Vector3.zero;
+    Vector3 moveDirection = Vector3.zero;
 
     private Vector3 speed = Vector3.zero;
 
@@ -28,8 +28,7 @@ public class CarMove : MonoBehaviour
     void Update()
     {
         Vector3 accel = Vector3.zero;
-        accel += movevalue * (moveForce - linearDampling);
-        accel *= Time.deltaTime;
+        accel += moveDirection * (moveForce - linearDampling) * Time.deltaTime;
 
 
         if(speed.magnitude < maxSpeed)
@@ -37,9 +36,9 @@ public class CarMove : MonoBehaviour
             speed += accel;
         }
 
-        speed += Physics.gravity;
 
         controller.Move(speed);
+        controller.Move(Physics.gravity * Time.deltaTime);
 
         //speed = Vector3.zero;
     }
@@ -48,13 +47,13 @@ public class CarMove : MonoBehaviour
     {
         Vector2 movevector = context.ReadValue<Vector2>();
 
-        movevalue = new Vector3(movevector.x, 0.0f, movevector.y);
+        moveDirection = new Vector3(movevector.x, 0.0f, movevector.y);
 
-        if (movevalue == Vector3.zero)
+        if (moveDirection == Vector3.zero)
             return;
 
 
-        print(movevalue);
+        print(moveDirection);
     }
 
 }

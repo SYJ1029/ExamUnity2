@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SceneController.unity
+    guid: 7213c894120823a4d96e35eedc045eca
+  - enabled: 1
+    path: Assets/Scenes/MazeScene.unity
+    guid: e251de75e252e7a4ebfb8f76602b2054
+  - enabled: 1
+    path: Assets/Scenes/RacingScene.unity
+    guid: 03b64cb1be0a3b84a8d0b43610b621ba
+  - enabled: 1
+    path: Assets/Scenes/RollerCosterScene.unity
+    guid: 33eb15d17eddd8645af39a2f99160393
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: a7875194ef804974da1c90b52fee3326, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
+  m_UseUCBPForAssetBundles: 0

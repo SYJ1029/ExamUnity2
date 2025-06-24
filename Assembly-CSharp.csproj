@@ -61,8 +61,15 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.41f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interfaces\IInputProvider.cs" />
     <Compile Include="Assets\Scripts\cs_Scene\SceneContoller.cs" />
+    <Compile Include="Assets\Scripts\Move\CharacterControllerMove.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IMovementStrategy.cs" />
+    <Compile Include="Assets\Scripts\cs_Cars\PlayerControllerFactory.cs" />
+    <Compile Include="Assets\Scripts\InputKeyboard\KeyboardByPolling.cs" />
     <Compile Include="Assets\Scripts\cs_Cars\CarMove.cs" />
+    <Compile Include="Assets\Scripts\Move\RigidBodyMove.cs" />
+    <Compile Include="Assets\Scripts\InputKeyboard\KeyboardByEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3D Game Kit - Props Pack\Shaders\Alien.shader" />

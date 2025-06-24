@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3b5c3c85a0e987c4b926faf48f51dd88, type: 3}
       propertyPath: m_Name
-      value: FloorPanel1x1
+      value: Tile1x1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3b5c3c85a0e987c4b926faf48f51dd88, type: 3}
       propertyPath: m_LocalPosition.x
@@ -84,10 +84,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0

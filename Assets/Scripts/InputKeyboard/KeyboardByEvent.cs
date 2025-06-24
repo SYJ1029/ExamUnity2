@@ -23,7 +23,7 @@ public class KeyboardByEvent : MonoBehaviour, IInputProvider
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed || context.canceled)
         {
             keyInput = context.ReadValue<Vector2>();
 

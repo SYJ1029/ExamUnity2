@@ -57,9 +57,6 @@ public class CarMove : MonoBehaviour
         print(moveDirection);
     }
 
-    void OnMove(Inputvalue value)
-    {
-
-    }
+  
 
 }

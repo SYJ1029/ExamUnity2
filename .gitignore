@@ -650,5 +650,6 @@ crashlytics-build.properties
 *.bmp
 *.gif
 *.tiff
+*.tif
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,unity,csharp

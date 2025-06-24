@@ -9,7 +9,10 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
     public float maxSpeed;
     public float linearDampling;
 
+    public float angularSpeed;
+
     Vector3 moveDirection = Vector3.zero;
+    Vector3 rotateDirection = Vector3.zero;
 
     private Vector3 speed = Vector3.zero;
 
@@ -41,10 +44,16 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
     {
         Vector3 accel = Vector3.zero;
         moveDirection = direction;
+        moveDirection.x = 0.0f;
+
+        float angle = 0.0f;
+        rotateDirection = direction;
+        rotateDirection.z = 0.0f;
 
       
         accel += moveDirection * moveForce * Time.deltaTime;
 
+        angle = rotateDirection.x * angularSpeed;
 
 
         if (speed.magnitude < maxSpeed)
@@ -56,6 +65,8 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
         controller.Move(speed);
         controller.Move(Physics.gravity * Time.deltaTime);
 
+
+        controller.transform.Rotate(controller.transform.up, angle);
 
         speed = Vector3.zero;
         moveDirection = Vector3.zero;

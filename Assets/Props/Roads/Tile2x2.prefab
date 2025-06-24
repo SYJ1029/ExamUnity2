@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 5463581571202030690}
   - component: {fileID: 6020293259235681116}
   - component: {fileID: 6283947882963282630}
-  - component: {fileID: 8584520627355137212}
+  - component: {fileID: 342801350309501760}
   m_Layer: 0
   m_Name: Tile2x2
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: bdbe8c7348df9bd42a0e74e5a39b2d34, type: 3}
---- !u!54 &8584520627355137212
+--- !u!54 &342801350309501760
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +175,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5903183005585962458}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

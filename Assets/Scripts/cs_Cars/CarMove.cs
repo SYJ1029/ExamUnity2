@@ -44,7 +44,7 @@ public class CarMove : MonoBehaviour
         //speed = Vector3.zero;
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    public void OnMove2(InputAction.CallbackContext context)
     {
         Vector2 movevector = context.ReadValue<Vector2>();
 
@@ -55,6 +55,11 @@ public class CarMove : MonoBehaviour
 
 
         print(moveDirection);
+    }
+
+    void OnMove(Inputvalue value)
+    {
+
     }
 
 }

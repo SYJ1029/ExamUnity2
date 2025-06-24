@@ -22,7 +22,9 @@ public class PlayerControllerFactory : MonoBehaviour
     void Update()
     {
         Vector2 input = inputProvider.GetMoveInput();
+        Vector2 mouseInput = inputProvider.GetMouseInput();
+        
         Vector3 direction = new Vector3(input.x, 0, input.y);
-        movementStrategy.Move(direction);
+        movementStrategy.Move(direction, mouseInput);
     }
 }

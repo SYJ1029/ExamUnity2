@@ -35,7 +35,7 @@ public class RidBodyMove : MonoBehaviour, IMovementStrategy
 
 
 
-    public void Move(Vector3 direction)
+    public void Move(Vector3 direction, Vector2 mouseInput)
     {
         Vector3 accel = Vector3.zero;
         moveDirection = direction;

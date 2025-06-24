@@ -25,7 +25,6 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
     }
 
     void FixedUpdate()
@@ -40,7 +39,7 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
 
 
 
-    public void Move(Vector3 direction)
+    public void Move(Vector3 direction, Vector2 mouseInput)
     {
         Vector3 accel = Vector3.zero;
         moveDirection = direction;
@@ -51,7 +50,7 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
         rotateDirection.z = 0.0f;
 
       
-        accel += moveDirection * moveForce * Time.deltaTime;
+        accel += controller.transform.forward * moveDirection.z * moveForce * Time.deltaTime;
 
         angle = rotateDirection.x * angularSpeed;
 
@@ -61,12 +60,12 @@ public class CharacterControllerMove : MonoBehaviour, IMovementStrategy
             speed += accel;
         }
 
-        speed += -speed.normalized * linearDampling * Time.deltaTime;
+        speed += speed.normalized * linearDampling * Time.deltaTime;
         controller.Move(speed);
         controller.Move(Physics.gravity * Time.deltaTime);
 
 
-        controller.transform.Rotate(controller.transform.up, angle);
+        transform.Rotate(controller.transform.up, angle);
 
         speed = Vector3.zero;
         moveDirection = Vector3.zero;
